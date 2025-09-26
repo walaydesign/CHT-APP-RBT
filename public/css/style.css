@@ -49,6 +49,20 @@ header nav {
   margin: 0 auto;
 }
 
+.inner-page section#header {
+  max-width: 768px;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.inner-page .footer {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .pic-cover {
   position: relative;
 }
@@ -306,6 +320,76 @@ header nav {
 
 .color-orange {
   color: #ff7b3b;
+}
+
+.cp .title {
+  margin-bottom: 14px;
+}
+
+.cp > .text {
+  margin-bottom: 48px;
+  color: #000000;
+}
+
+@media screen and (max-width: 991px) {
+  .cp .title {
+    margin-bottom: 16px;
+  }
+  .cp > .text {
+    margin-bottom: 32px;
+  }
+}
+
+.limited-event_text {
+  width: 418px;
+  height: 208px;
+  background-image: url(../img/half-circle.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  padding-top: 76px;
+}
+
+.limited-event_text .text {
+  margin: 0;
+}
+
+.limited-event > img {
+  max-width: 558px;
+  width: 100%;
+  margin: 0 auto 48px;
+  border-radius: 16px;
+  display: block;
+}
+
+.limited-event .btn {
+  padding: 15px 73px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 991px) {
+  .limited-event_text {
+    width: 311px;
+    height: 156px;
+    padding-top: 48px;
+  }
+  .limited-event_text .text {
+    color: #000000;
+  }
+  .limited-event > img {
+    margin-bottom: 32px;
+  }
 }
 
 .swiper-pagination {
@@ -679,6 +763,18 @@ header nav {
   bottom: 4px;
 }
 
+.song-pic_icon.stop {
+  display: none;
+}
+
+.song-pic.playing .song-pic_icon.play {
+  display: none;
+}
+
+.song-pic.playing .song-pic_icon.stop {
+  display: block;
+}
+
 .song-info {
   text-align: center;
   margin-bottom: 28px;
@@ -722,25 +818,14 @@ header nav {
   margin-bottom: 12px;
 }
 
-.song-list_pic {
+.song-list_item .song-pic {
   width: 56px;
   height: 56px;
   border-radius: 4px;
-  position: relative;
   overflow: hidden;
 }
 
-.song-list_pic_main {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  top: 0;
-  left: 0;
-}
-
-.song-list_pic_icon {
+.song-list_item .song-pic_icon {
   position: absolute;
   width: 20px;
   right: 2px;
@@ -801,7 +886,7 @@ header nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #E9F5FF;
+  background-color: #e9f5ff;
   margin: 0 auto 28px;
 }
 

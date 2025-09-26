@@ -211,7 +211,7 @@
       min-width: auto;
     }
   </style>
-  <body>
+  <body class="inner-page">
     <!-- 必加 Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -286,9 +286,18 @@
             下載成功<img src="./public/img/success.svg" alt="" />
           </h2>
           <div class="song-pic pic-cover">
-            <img class="pic-cover_img" src="./public/img/list-1.jpg" alt="" />
-            <img class="song-pic_icon" src="./public/img/play.svg" alt="" />
-          </div>
+              <img class="pic-cover_img" src="./public/img/list-1.jpg" alt="" />
+              <img
+                class="song-pic_icon play"
+                src="./public/img/play.svg"
+                alt=""
+              />
+              <img
+                class="song-pic_icon stop"
+                src="./public/img/stop.svg"
+                alt=""
+              />
+            </div>
           <div class="song-info">
             <h3 class="song-info_name">
               完整歌名完整歌名完整歌名完整完整歌名完整完整歌名完整完整歌名完整
@@ -411,6 +420,7 @@
     </section>
 
     <script src="./public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="./public/js/common.js"></script>
 
     <!-- 嵌入線上客服Q寶 -->
     <!-- bottomOffset可據置底按鈕高度設定-->
