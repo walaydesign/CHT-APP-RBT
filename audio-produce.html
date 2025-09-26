@@ -343,11 +343,15 @@
           </div>
         </div>
 
-        <div class="produce-sec">
+        <div class="produce-sec choose-bgm">
           <h3 class="produce-sec_title">請選擇背景音樂</h3>
+            <div class="choose-bgm_content no-music">
           <select name="" id="" class="select">
-            <option value="">不使用</option>
+            <option value="no-music">不使用</option>
+            <option value="">告白音樂 1</option>
           </select>
+          <button><img src="./public/img/Play-circle-Filled.svg" alt=""></button>
+            </div>
         </div>
 
         <div class="produce-sec">
@@ -364,7 +368,36 @@
             </div>
           </div>
         </div>
-        <a href="" class="btn btn-bg-blue w-100">產出語音</a>
+        
+        <button class="btn btn-bg-blue w-100 btn-produce">產出語音</button>
+
+        <div class="produce-sec audio">
+          <h3 class="produce-sec_title mb-2">音檔 1</h3>
+          <div class="audio_circle">
+            <p class="audio_time">
+                <span>00</span>:<span>30</span>
+            </p>
+          </div>
+          <button class="btn btn-border-blue mb-3_5">
+            <img src="./public/img/Play-circle.svg" alt="">
+            <span>試聽</span>
+          </button>
+          <div class="row">
+            <div class="col-6">
+                <button class="btn btn-border-black btn-delete">
+                    <img src="./public/img/Delete.svg" alt="">
+                    <span>刪除</span>
+                </button>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-bg-blue">
+                    <img src="./public/img/Cloud-upload-white.svg" alt="">
+                    <span>上傳</span>
+                </button>
+            </div>
+          </div>
+        </div>
+
         <div class="remind">
           <h3 class="title-border">注意事項</h3>
           <ol>
@@ -489,19 +522,23 @@
     <script src="./public/js/common.js"></script>
 
     <script>
-      var swiper = new Swiper(".example_swiper", {
-        slidesPerView: 1.2,
-        spaceBetween: 10,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
 
       $(".btn-produce").click(function () {
         $(this).hide();
-        $(".ai-produce").show();
+        $(".audio").show();
       });
+
+      $(".btn-delete").click(function() {
+        $(this).parents(".audio").remove();
+      })
+
+      $(".choose-bgm_content select").change(function() {
+        if($(this).val() == "no-music") {
+            $(this).parents(".choose-bgm_content").addClass("no-music");
+        }else {
+             $(this).parents(".choose-bgm_content").removeClass("no-music");
+        }
+      })
     </script>
 
     <!-- 嵌入線上客服Q寶 -->

@@ -30,8 +30,18 @@ header nav {
   margin-bottom: 12px !important;
 }
 
+.mb-3_5 {
+  margin-bottom: 20px;
+}
+
 .mb-4_5 {
   margin-bottom: 28px;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
 }
 
 .container2 {
@@ -118,15 +128,32 @@ header nav {
   border-radius: 100px;
   padding: 15px;
   font-size: 18px;
-  display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+
+.btn img {
+  width: 20px;
 }
 
 .btn.sm {
   padding: 7px 12px;
   font-size: 14px;
+}
+
+.btn.sm img {
+  width: 18px;
 }
 
 .btn-bg-blue {
@@ -137,21 +164,12 @@ header nav {
 .btn-border-blue {
   border: 1px solid #209cff;
   color: #209cff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-color: transparent;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 4px;
 }
 
-.btn-border-blue img {
-  width: 18px;
+.btn-border-black {
+  border: 1px solid #000000;
+  color: #000000;
 }
 
 .btn-back {
@@ -1319,5 +1337,80 @@ header nav {
 
 .radio:checked::before, .radio:checked::after {
   opacity: 1;
+}
+
+.choose-bgm_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.choose-bgm_content select {
+  width: calc(100% - 32px - 12px) !important;
+}
+
+.choose-bgm_content button {
+  width: 32px;
+  padding: 0;
+}
+
+.choose-bgm_content button > img {
+  width: 100%;
+}
+
+.choose-bgm_content.no-music select {
+  width: 100% !important;
+}
+
+.choose-bgm_content.no-music button {
+  display: none;
+}
+
+.audio {
+  display: none;
+}
+
+.audio_circle {
+  width: 116px;
+  height: 116px;
+  background-image: url(../img/record-circle-2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.audio_circle p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.audio .btn {
+  width: 100%;
+  padding: 9px;
+}
+
+.audio .row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.audio .row > div {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -69,8 +69,18 @@ header nav {
   margin-bottom: 12px !important;
 }
 
+.mb-3_5 {
+  margin-bottom: 20px;
+}
+
 .mb-4_5 {
   margin-bottom: 28px;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
 }
 
 .container2 {
@@ -151,29 +161,33 @@ header nav {
   border-radius: 100px;
   padding: 15px;
   font-size: 18px;
-  display: block;
   width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  img {
+    width: 20px;
+  }
   &.sm {
     padding: 7px 12px;
     font-size: 14px;
+    img {
+      width: 18px;
+    }
   }
   &-bg-blue {
     background-color: $lblue-5;
-
     color: $white;
   }
   &-border-blue {
     border: 1px solid $lblue-5;
     color: $lblue-5;
-    display: flex;
     background-color: transparent;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-
-    img {
-      width: 18px;
-    }
+  }
+  &-border-black {
+    border: 1px solid $black;
+    color: $black;
   }
   &-back {
     margin: 12px 0;
@@ -1239,7 +1253,7 @@ header nav {
       margin: 2px 0;
     }
   }
-  >.btn {
+  > .btn {
     margin-bottom: 24px;
   }
 }
@@ -1306,7 +1320,8 @@ header nav {
   height: 24px;
   position: relative;
   transform: none !important;
-  &::before, &::after {
+  &::before,
+  &::after {
     position: absolute;
     content: "";
     border-radius: 50%;
@@ -1324,11 +1339,71 @@ header nav {
     width: 50%;
     height: 50%;
     background-color: $lblue-5;
-    border-color: 0
+    border-color: 0;
   }
   &:checked {
-    &::before, &::after {
+    &::before,
+    &::after {
       opacity: 1;
+    }
+  }
+}
+
+.choose-bgm {
+  &_content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    select {
+      width: calc(100% - 32px - 12px) !important;
+    }
+    button {
+      width: 32px;
+      padding: 0;
+      > img {
+        width: 100%;
+      }
+    }
+    &.no-music {
+      select {
+        width: 100% !important;
+      }
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
+.audio {
+  display: none;
+  &_circle {
+    width: 116px;
+    height: 116px;
+    background-image: url(../img/record-circle-2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+  .btn {
+    width: 100%;
+    padding: 9px;
+  }
+  .row {
+    margin-left: -8px;
+    margin-right: -8px;
+    >div {
+      padding-left: 8px;
+      padding-right: 8px;
     }
   }
 }
